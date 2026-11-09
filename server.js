@@ -4,7 +4,7 @@ import { extname, join, normalize } from 'node:path';
 
 const root = process.cwd();
 const mime = { '.html':'text/html; charset=utf-8', '.css':'text/css; charset=utf-8', '.js':'text/javascript; charset=utf-8', '.json':'application/json; charset=utf-8', '.svg':'image/svg+xml', '.png':'image/png', '.jpg':'image/jpeg', '.ico':'image/x-icon' };
-const routes = new Set(['/','/insights','/briefings','/research','/assistant','/solutions']);
+const routes = new Set(['/','/insights','/briefings','/research','/assistant','/solutions','/en','/en/insights','/en/briefings','/en/research','/en/assistant','/en/solutions']);
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, 'http://localhost');
   const pathname = decodeURIComponent(url.pathname);
