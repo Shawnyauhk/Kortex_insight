@@ -26,3 +26,9 @@
 - `public/kortex-insight.png`：原樣保存的使用者提供標誌；`app.config.ts` 專案 `logoUrl` 指向相同標誌圖的 HTTPS URL。
 - `public/manus-routes.json`：中英文十二條頁面路由清單。
 - `package.json`：原生 Node 啟動命令及專案資訊。
+
+## Cloudflare Pages 部署增補
+
+- 使用 Node 內建模組的 `build.js` 建立 `dist/`；輸出只包含 `index.html`、`src/`、`public/`、網站路由 JSON，以及 Cloudflare Pages `_redirects`，不發布 `server.js`、`plan.md`、`TODO.md` 或專案組態檔。
+- `npm run build` 為無外部套件的靜態建置命令；Cloudflare Pages 輸出目錄設定為 `dist`，以明確的繁中／英文頁面路由 fallback 支援單頁應用導覽。
+- 部署至新的公開 Cloudflare Pages 專案 `kortex-insight`；來源為 GitHub `Shawnyauhk/Kortex_insight` 的 `main` 分支，使用預設 `pages.dev` 網址，不配置自訂網域或後端服務。

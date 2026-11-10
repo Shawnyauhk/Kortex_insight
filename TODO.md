@@ -10,3 +10,4 @@
 - [x] **非後端示範邊界**：內容使用展示示例，所有搜尋、AI 及專業服務僅模擬前端狀態，不接入真實檢索、模型、付款或通知服務；示例來源不表示已完成來源接入。
 - [x] **Kortex Insight 品牌標誌**：將使用者提供的圖檔設為網站標誌，保持原有比例並套用於主要品牌呈現和 favicon。
 - [x] **英文網站版本**：提供繁體中文與英文語言切換，在首頁、法律資訊、簡報與往期、法例與判例研究、AI 輔助研究及律所方案頁均有完整英文內容；相應導覽、搜尋提示、互動提示與示例操作亦以英文顯示。
+- [ ] **Cloudflare Pages 靜態部署**：使用 GitHub `Shawnyauhk/Kortex_insight` 的 `main` 分支，建立名為 `kortex-insight` 的新 Cloudflare Pages 專案並公開部署到預設 `pages.dev` 網址，不設定自訂網域。只部署靜態前端，不部署 Node 伺服器或後端；`npm run build` 輸出 `dist/`，只包含網站入口、前端資產、公開標誌、路由 manifest 與 SPA 頁面路由 fallback，不包含 `server.js`、`plan.md`、`TODO.md` 或其他專案內部檔案。
