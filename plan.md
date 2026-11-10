@@ -32,3 +32,7 @@
 - 使用 Node 內建模組的 `build.js` 建立 `dist/`；輸出只包含 `index.html`、`src/`、`public/`、網站路由 JSON，以及 Cloudflare Pages `_redirects`，不發布 `server.js`、`plan.md`、`TODO.md` 或專案組態檔。
 - `npm run build` 為無外部套件的靜態建置命令；Cloudflare Pages 輸出目錄設定為 `dist`，以明確的繁中／英文頁面路由 fallback 支援單頁應用導覽。
 - 部署至新的公開 Cloudflare Pages 專案 `kortex-insight`；來源為 GitHub `Shawnyauhk/Kortex_insight` 的 `main` 分支，使用預設 `pages.dev` 網址，不配置自訂網域或後端服務。
+
+## 桌面版版心寬度修正
+
+現有 `min-width:1500px` 規則將左右側距計算為 `(100vw - 1220px) / 2`，但主頁版心同時受 `1440px` 上限約束，造成大螢幕內距過度增加。本次在該大型桌面斷點以較寬的 `1760px` 版心及有上限的流動內距取代此固定窄欄計算，並放寬首頁主搜尋列；小於 `1500px` 的既有平板／手機樣式與文字卡片閱讀上限維持不變。
