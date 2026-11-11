@@ -1,0 +1,4 @@
+Kortex Insight Cloudflare Pages deployment check
+Repository: Shawnyauhk/Kortex_insight
+Branch: main
+Purpose: verify that a GitHub push is automatically built and deployed.
